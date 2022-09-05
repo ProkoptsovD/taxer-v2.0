@@ -12,6 +12,7 @@ import { messages } from './constants/messages';
 
 function App() {
   const [ shouldShowDropZone, setShouldShowDropZone ] = useState(false);
+  const [ tipContent, setTipContent ] = useState(messages.readCert);
   const store = useStoreContext();
   const cert = useCertificateContext();
 
@@ -20,21 +21,28 @@ function App() {
   const shouldShowTip = store?.displayedCertificateId === '' || shouldShowDropZone;
 
   const buttonContent = shouldShowDropZone ? 'Скасувати' : 'Додати';
-  const tipContent = cert?.error ? messages.error : shouldShowDropZone ? messages.addCert : messages.readCert;
 
   // styles
   const vieBoxCss = `${styles.viewBox} ${shouldShowDropZone ? styles.dropZone : ''}`;
 
   useEffect(() => {
-    if(shouldShowDropZone && cert?.error) cert?.reset();
+    if(cert?.error) {
+      setTipContent(messages.error);
+      return;
+    }
 
-  }, [shouldShowDropZone, cert, store ]);
+  }, [cert]);
 
-  const closeDropZone = () => setShouldShowDropZone(false);
+  const closeDropZone = () => {setShouldShowDropZone(false); cert?.reset()};
   const toggleDropZoneAndCertificateDetailsView = () => {
-    if(shouldShowDropZone) store?.setDisplayedCertificate('');
+    if(shouldShowDropZone) {
+      store?.setDisplayedCertificate('');
+      setTipContent(messages.readCert);
+    } else {
+      setTipContent(messages.addCert);
+    };
 
-    setShouldShowDropZone(!shouldShowDropZone)
+    setShouldShowDropZone(!shouldShowDropZone);
   };
 
   return (
