@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ProkoptsovD.github.io/taxer-v2.0/",
   "dependencies": {
+    "@lapo/asn1js": "^1.2.3",
     "@peculiar/x509": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -15,6 +16,7 @@
     "moment": "^2.29.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-dropzone": "^14.2.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.2",
     "web-vitals": "^2.1.3"
