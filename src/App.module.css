@@ -1,0 +1,25 @@
+.wrapper {
+  height: 175px;
+}
+.viewBox {
+  position: relative;
+  height: 225px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--clr-border-100);
+}
+.viewBox.dropZone {
+  border-style: dashed;
+}
+.tip, .noCerts {
+  text-align: center;
+  color: var(--clr-text-200);
+}
+.tip {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 100%;
+
+  transform: translateX(-50%);
+}

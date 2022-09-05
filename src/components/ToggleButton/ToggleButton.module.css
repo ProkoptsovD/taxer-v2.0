@@ -1,0 +1,22 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 40px;
+    margin: 12% auto 0 auto;
+    font: inherit;
+    line-height: 1;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: var(--clr-button-100);
+    color: var(--clr-text-100);
+
+    cursor: pointer;
+    transition: background-color 250ms linear;
+}
+.button:hover {
+    background-color: var(--clr-button-200);
+}
