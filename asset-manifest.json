@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/taxer-v2.0/static/css/main.16bee1fa.css",
-    "main.js": "/taxer-v2.0/static/js/main.38ecd8d4.js",
+    "main.js": "/taxer-v2.0/static/js/main.a803c749.js",
     "index.html": "/taxer-v2.0/index.html",
     "main.16bee1fa.css.map": "/taxer-v2.0/static/css/main.16bee1fa.css.map",
-    "main.38ecd8d4.js.map": "/taxer-v2.0/static/js/main.38ecd8d4.js.map"
+    "main.a803c749.js.map": "/taxer-v2.0/static/js/main.a803c749.js.map"
   },
   "entrypoints": [
     "static/css/main.16bee1fa.css",
-    "static/js/main.38ecd8d4.js"
+    "static/js/main.a803c749.js"
   ]
 }
